@@ -1,4 +1,4 @@
-import express, { Request, Response } from 'express';
+import express from 'express';
 import dotenv from 'dotenv';
 import { productsRoutes } from '@src/routes';
 import { ExpressRouterAdapter } from '@src/adapters';
@@ -19,5 +19,5 @@ productsRoutes.forEach(router => {
 });
 
 server.listen(process.env.PORT || 3000, () => {
-  console.log('Server Running!');
+  console.log('Server Running');
 });
