@@ -6,4 +6,6 @@ dotenv.config({
   path: '.env.test',
 });
 
-const request = supertest(app);
+beforeAll(async () => {
+  global.request = supertest(app);
+});

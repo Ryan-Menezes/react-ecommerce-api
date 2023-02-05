@@ -33,13 +33,13 @@ class ProductController {
   public async show(req: Request): Promise<Response> {
     try {
       const getProductByIdUseCase = new GetProductById(this.productRepository);
-      const products = await getProductByIdUseCase.execute({
+      const product = await getProductByIdUseCase.execute({
         id: req.params.id,
       });
 
       return {
         response: {
-          products,
+          product,
         },
         statusCode: 200,
       };

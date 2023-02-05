@@ -1,22 +1,10 @@
-import express from 'express';
+import http from 'http';
 import dotenv from 'dotenv';
-import { productsRoutes } from '@src/routes';
-import { ExpressRouterAdapter } from '@src/adapters';
+import app from '@src/app';
 
 dotenv.config();
 
-const server = express();
-
-server.use(express.json());
-server.use(express.urlencoded({
-  extended: true,
-}));
-
-productsRoutes.forEach(router => {
-  const method = router.method.toLocaleLowerCase();
-  const handler = ExpressRouterAdapter.adapt(router);
-  server.get(router.path, handler);
-});
+const server = http.createServer(app);
 
 server.listen(process.env.PORT || 3000, () => {
   console.log('Server Running');

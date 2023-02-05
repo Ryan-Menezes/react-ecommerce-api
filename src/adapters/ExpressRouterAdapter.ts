@@ -11,7 +11,7 @@ export class ExpressRouterAdapter {
       };
 
       const { response, statusCode } = await router.handler(request);
-      res.status(statusCode).json(response);
+      res.status(statusCode).json({ ...response, statusCode });
     };
   }
 }
