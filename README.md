@@ -1,5 +1,5 @@
-# React Ecommerce
-An ecommerce integrated with the stripe platform
+# React Ecommerce API
+An ecommerce api integrated with the stripe platform
 ## Settings
 Have [Node.js](https://nodejs.org/pt-br/) installed on your machine and through your terminal enter the project directory and run the command "npm install":
 ```sh
@@ -12,5 +12,3 @@ Finally, start the node.js server with the command "npm run dev" in a separate t
 cd "project directory"
 npm run dev
 ```
-## Important
-This project is under development
