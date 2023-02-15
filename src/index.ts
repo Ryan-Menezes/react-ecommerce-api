@@ -1,6 +1,7 @@
 import http from 'http';
 import dotenv from 'dotenv';
 import app from '@src/app';
+import 'module-alias/register';
 
 dotenv.config();
 
